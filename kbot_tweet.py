@@ -8,7 +8,7 @@ import key
 url = "https://api.twitter.com/1.1/statuses/update.json"
 
 # ツイート本文
-params = {"status": "Hello, World!"}
+params = {"status": {}
 
 # OAuth認証で POST method で投稿
 twitter = OAuth1Session(key.CK, key.CS, key.AT, key.AS)
