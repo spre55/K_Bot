@@ -1,13 +1,13 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#coding:utf-8
 
 from requests_oauthlib import OAuth1Session
-import key
-
+import key,twt_cntnts.py
 # ツイート投稿用のURL
 url = "https://api.twitter.com/1.1/statuses/update.json"
 
 # ツイート本文
+
 params = {"status": {}
 
 # OAuth認証で POST method で投稿
