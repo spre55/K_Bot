@@ -2,13 +2,14 @@
 #coding:utf-8
 
 from requests_oauthlib import OAuth1Session
-import key,twt_cntnts.py
+import key,twt_cntnts,random
+
 # ツイート投稿用のURL
 url = "https://api.twitter.com/1.1/statuses/update.json"
-
+# twt_cntntsからツイートを取得する為のキー生成
+rdm_key = random.randint(1,10)
 # ツイート本文
-
-params = {"status": {}
+params = {"status": twt_cntnts.twt(rdm_key)}
 
 # OAuth認証で POST method で投稿
 twitter = OAuth1Session(key.CK, key.CS, key.AT, key.AS)
