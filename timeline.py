@@ -6,10 +6,13 @@ import json
 import key
 
 # タイムライン取得用のURL
-url = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
 
 # とくにパラメータは無い
-params = {}
+params = {
+		"screen_name":'sprechchor44',
+		"count":5
+	}
 
 # OAuth で GET
 twitter = OAuth1Session(key.CK, key.CS, key.AT, key.AS)
